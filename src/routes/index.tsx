@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './Home';
 import NotFound from './NotFound';
-import SignIn from './SignIn';
-import HackitPage from './Hackit';
+import Campaigns from './Campaigns';
+import Meeting from './Meeting';
+import Buy from './Buy';
 
 const AppRouter = () => {
   return (
@@ -13,17 +14,22 @@ const AppRouter = () => {
         <Route
           exact
           path="/"
-          component={SignIn}
-        />
-        <Route
-          exact
-          path="/home"
           component={Home}
         />
         <Route
           exact
-          path="/h/:slug"
-          component={HackitPage}
+          path="/campaigns"
+          component={Campaigns}
+        />
+        <Route
+          exact
+          path="/buy"
+          component={Buy}
+        />
+        <Route
+          exact
+          path="/m/:slug"
+          component={Meeting}
         />
         <Route
           exact
